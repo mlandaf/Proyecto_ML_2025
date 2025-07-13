@@ -99,7 +99,7 @@ Implementar y comparar múltiples algoritmos de machine learning para predecir l
 | Gradient Boosting | 0.9403 | 44.27 | 1° |
 | XGBoost | 0.9396 | 44.56 | 2° |
 | Bagging | 0.9344 | 46.42 | 3° |
-| Neural Network | 0.9333 | 46.79 | 4° |
+| Neural Network | 0.9288 | 48.34 | 4° |
 | Voting | 0.9253 | 49.54 | 5° |
 
 ### **Fase 4: Optimización**
@@ -110,7 +110,7 @@ Implementar y comparar múltiples algoritmos de machine learning para predecir l
 
 **Modelo Final Optimizado:**
 - **Algoritmo**: Gradient Boosting
-- **R² Score**: 0.9480 (94.8% de varianza explicada)
+- **R² Score**: 0.9497 (Cross-Validation) / 0.9480 (Test)
 - **RMSE**: 40.89 bicicletas
 - **MAE**: 24.78 bicicletas
 
@@ -134,15 +134,17 @@ Hiperparámetros óptimos:
 - **Generalización**: Excelente (sin overfitting)
 
 ### **Mejoras logradas con optimización:**
-- Gradient Boosting: +0.58% mejora
-- XGBoost: +0.64% mejora
-- Neural Network: +0.07% mejora
+- Gradient Boosting: +1.00% mejora
+- XGBoost: +0.97% mejora
+- Neural Network: +0.68% mejora
+- Voting: +0.75% mejora
+- Bagging: +0.03% mejora
 
 ---
 
 ## 🛠️ **Stack Tecnológico**
 
-- **Python 3.x**
+- **Python 3.10.16**
 - **Pandas**: Manipulación de datos
 - **NumPy**: Operaciones numéricas
 - **Scikit-learn**: Algoritmos ML y Pipeline
@@ -155,10 +157,9 @@ Hiperparámetros óptimos:
 ## 📈 **Insights de Negocio**
 
 ### **Factores clave de demanda:**
-1. **Temperatura**: Correlación positiva fuerte
-2. **Horarios pico**: 8:00 AM y 5:00-6:00 PM
-3. **Estacionalidad**: Primavera/verano > otoño/invierno
-4. **Día laborable**: Patrones diferentes vs fines de semana
+1. **Temperatura (`temp`)** - Correlación fuerte positiva con demanda
+2. **Hora del día (`hr`)** - Patrones claros de uso (picos matutinos y vespertinos)
+3. **Condiciones climáticas (`weathersit`)** - Impacto significativo en la demanda
 
 ### **Aplicaciones prácticas:**
 - Redistribución predictiva de bicicletas
@@ -181,7 +182,7 @@ Hiperparámetros óptimos:
 
 ## 🚀 **Conclusiones**
 
-El proyecto ha logrado desarrollar un **modelo de predicción altamente preciso** (R² = 0.948) siguiendo todas las especificaciones del curso. La metodología implementada garantiza resultados científicamente válidos y aplicables en entornos reales.
+El proyecto ha logrado desarrollar un **modelo de predicción altamente preciso** (R² = 0.9480) siguiendo todas las especificaciones del curso. La metodología implementada garantiza resultados científicamente válidos y aplicables en entornos reales.
 
 **Logros destacados:**
 - Modelo final con 94.8% de precisión
